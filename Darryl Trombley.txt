@@ -1,0 +1,597 @@
+
+
+00:00:06
+Welcome to the next installment of the Web Control owner, operator, Webinar series.
+Give a couple of minutes here to allow everybody in
+
+Kirk Strobel
+00:00:22
+like the numbers are going up fast.
+
+
+00:00:25
+Nice
+just like fill in my gas tank.
+all right. It looks like things have slowed down a bit, so we shall begin
+once again. Welcome everybody to another owner, operator, Webinar. We'll get the disclaimer stuff out of the way. This webinar may contain confidential and or privileged information of Automated Logic Corporation, and it's affiliated companies.
+
+
+00:01:01
+It is intended a intended for automated logic customers
+
+
+00:01:07
+only. If you are not the intended recipient. Please do not disclose, copy, distribute, or use this information. Do not share with any competitors of automated logic, Corporation
+and delete all copies of the invitation, including attachments. If applicable.
+
+
+00:01:22
+your cooperation as always, is greatly appreciated.
+
+
+00:01:28
+So this web control Webinar
+
+
+00:01:31
+is being recorded as we mentioned, and this is going to be published to the automated logic training area of the dealer portal. It is also
+
+
+00:01:40
+in the Lms or learning management system. So anybody that has access to that. If you've taken classes with us. You can get those recordings from there. If you do not have Lms access reach out to your regional sales manager
+or your I'm Sorry wrong group
+reach out to your dealer or branch, and they can get you the links to previous recordings. Anybody that is registered for this Webinar will get a link sent to you in a day or so
+with the recording. For this
+everyone is muted. We do want to hear what you have to say, so to speak. so use the question, tab
+the Q. A. Tab is monitored by my esteemed associate, Mr. Kirk Strobel.
+
+
+00:02:32
+and he'll be interrupting as needed and helping along the way with answering any questions you may have.
+
+
+00:02:40
+There is a chat window, but we do not really pay attention to that. So for interacting with us, please again use the questions, Tab. This is live informal, and you know occasionally there are mistakes made. I'll apologize in advance for any of my tongue twisters.
+But we do want to have more information from you about what you would like to see for other Webinars.
+
+
+00:03:07
+So with that in mind you can reach out to us@trainingatcarrier.com. and send us your ideas also. Send us your reviews. Tell us what you think of this one or any other one or anything else that you would like to see, and what we're doing.
+
+
+00:03:24
+We want to make sure these things are here for you. As I mentioned, I am Daryl, trombly training developer and instructor here at automated Logic
+and Kurt Strobel alongside for the ride again a training developer instructor for automated logic.
+
+
+00:03:42
+and we will do our best to help you understand all of this stuff that we're talking about.
+
+
+00:03:50
+So this webinar is brought to you as always by the global controls training group. You can see what else is available to you as end users and owner operators
+by going to automated logic.com and go to the training dropdown, and you can see course schedules, course catalogs, and even read more about our trainers.
+So what are we going to do today. We are going to talk about basics, of heating ventilation in air conditioning affectionately known as Hvac.
+And we're going to talk about common small building systems that are out there set points and schedules related to mechanical equipment.
+optimized start, and what that does for making a building comfortable.
+And then a review of some common acronyms for a better understanding of what all of this means.
+The reason that this Webinar came about is in my experience. I've run across a lot of scenarios
+where small buildings especially.
+there will be a building management system in place. But there isn't a facilities, engineer or system operator on site.
+So this
+complex building management system get shove to somebody just because they understand how computers work, or because they deal with schedules or something like that.
+And a lot of times.
+The things that we talk about within the industry just goes over somebody's head because they don't understand all these things that we revert refer to. So that's the reason for this. Hopefully, you find it useful and worthwhile.
+and let's begin.
+So key transfer is where all of this begins.
+We talk about turning on the air conditioning or turning on the heat. And really what we're doing with this is simply transferring heat from inside of a building to outside of a building, or from one medium to another.
+And everything within this world really
+works based upon heat transfer in one way, shape or form. So this is a very simplistic diagram. and you can kind of think of this as the way you would interact or expect things to look like within your home.
+We have our furnace or air handler here.
+This one has a duct to outside to bring some fresh air in. Here is our return error. It gets pulled through this unit to either heat or cool it
+by this fan blown into the duct in the duct system.
+is in place and hidden in walls and above ceilings and below floors and things, to be able to bring this tempered conditioned, cleaned air
+back into the space where we're at. So this is really what is happening even on larger commercial systems. It just does it in a little bit different way.
+The next thing that we talk about is cooling and dehumidification, and the fact that these things work together. I've run into scenarios that people are
+especially schools. Schools will run into this quite frequently if they have air conditioning, running. It's middle of the summer.
+and they're having terrible humidity problems. because the bulk of the students aren't there.
+So these systems are running air conditioning, and it quickly cools down the temperature in the space. But that quick, cool down doesn't allow it to remove any of the humidity that it can do when it's loaded up with people
+so real quick. What we're looking at in this slide
+is, we have a coil that we refer to as an evaporator.
+We bring our return air or warm air from the building through our duct, work it passes across this coil
+in the air, coming in. If it's 75 degrees. it gets cooled
+and it
+leaves the coil. It's a 60 degrees. Well is that air cools just like you see
+water, or condensate form on a glass of ice water on a muggy day. The same thing happens with this air as it passes through these coils.
+so the water
+collects on the fins of the coil, drips down, goes down a drain, and then the air that comes out is cooler and drier to recirculate around the building
+so cooling and dehumidification work together, and that can be a very challenging thing depending on your building type and what the systems are designed to do.
+Now I don't want anybody to freak out. And hopefully the attendance Count Isn't dropping like a rock with these first couple of slides bear with me. It's not going to, hurt, I promise.
+So here again is that evaporator coil we were talking about, and here's our 75 degree room air, and our 55 degree air that gets blown into our duct work and then back into our spaces.
+
+
+00:09:36
+So this
+
+
+00:09:38
+refrigeration circuit
+utilizes refrigerant that we pump with a compressor.
+We typically have a coil again. Think in terms of what you see at your house. You've got your outside air conditioning unit that typically holds the compressor in the condenser outside.
+and then we see our lines that run back into the house. And this is what sits inside of your furnace or air handler.
+and then we have a larger line that comes back out of the house and back to the condensing units that's outside. And again, what we're doing is we're transferring heat.
+The heat is absorbed from the room. through the coil and into the refrigerant which comes back into the compressor is a cool vapor. The compressor does
+it's process and turns it into hot vapor, which we bring through the outside coils.
+And
+even if it's a 95 degree outdoor day, we can still it push that heat
+out of the refrigerant. It comes back in, and the entire process starts over again.
+So one of the things I want to touch on is the cleanliness of these coils very important to understand. The evaporators have filters. That's why you have filters in place that you have cleaned or replaced
+a monthly quarterly.
+sometimes once 8 years. Whether it needs it or not, all depends on whatever the maintenance program is.
+
+
+00:11:15
+The outside coils. Don't necessarily usually have filters.
+
+
+00:11:20
+but they are just as important to keep clean. and you will need to make sure that this outside coil is cleaned regularly, which is part of the process that your mechanical contractors typically work through.
+Let me take a quick sip here.
+So another slide that may have you running for the hills is simply a reference to what a btu is.
+Everything that you hear about within the Hvac world refers to things in Btus. British thermal units is what that means
+in it is the amount of heat or energy required
+to change £1 of water by one degree.
+so keep in mind. The pound of water is not a gallon of water. One gallon of water is roughly £8 a little more. So that's
+
+
+00:12:21
+the process by which we measure this.
+
+
+00:12:25
+Next to you. Here things referred to as tons, and that refers to
+tons of cooling, and it's literally how much cooling can
+be produced by melting one ton of ice. So 12,000 B to use is one ton of ice. and that is what it takes in 1 h
+to produce cooling. So these things have a little bit more meaning to them rather than just these generic terms that things get thrown all over the place.
+The next type of system we're going to talk about is air-cooled chillers.
+They are called chillers.
+Look again like the outside portion of your residential style air conditioning unit.
+just much larger typically
+and it will have its coils fans to be able to get rid of the heat.
+and it also has
+that cooling evaporator coil within it
+that cools water. that, utilizing a pump. pushes the chilled water to air handling systems
+or to little cabinet unit systems that we may have throughout the building.
+
+
+00:13:50
+and then that water is returned back to the chiller
+
+
+00:13:54
+to have the heat transferred out of the water back into the refrigerant system.
+producing cold water that gets recirculated back to the building. So again an air, cool, chiller
+relies upon a pump
+to move chilled water to air handlers or fan coils
+the air. Handlers in turn push the air through duct work
+that we end up feeling in our spaces. And there's various types of air handlers. We'll get into more of that in a little bit.
+Next we have water cooled chillers. So with water cooled chillers. This is the chiller itself. They're typically much larger.
+and i'm not going to spend a great deal of time on this, because more than likely, if you are the owner of a small building, you're not going to have large water-cooled equipment.
+but I want it part of the discussion with the water cooled chiller. We also have
+cooling towers that again transfer the heat. We have one barrel on the the
+chiller that deals with what we refer to as condenser water that goes outside to reject the heat outside of the building.
+and then we have our chilled water, which, just like the air, cooled chiller, is what circulated into the building.
+and through air, handlers or fan coils, and the like. So it's 2 totally separate water systems that these utilize.
+Next, we're going to talk about. Boilers.
+Boilers probably are a lot less mystical than chilled water systems.
+
+
+00:15:44
+because boilers have been in everything they're referred to in movies and TV shows and all kinds of things.
+
+
+00:15:52
+So most people have a general understanding of what boilers are and what they're used for.
+Boilers comes in all shapes and sizes. You might see very large boilers that looks like this big green one here. and a lot of times. Those will possibly be steam boilers when you see them in that setup.
+then we have the smaller high efficiency boilers. Here's a very small steam boiler example, where it has a sight glass on the side of the boiler, to be able to see that it's half full of water, so that it can boil the water and make steam. Hence the term boiler.
+Then we see a lot of boilers where they are connected together
+in unison, and use several boilers to stage up.
+and that way. If it's a mild day, you might only run the burner in one of these. If it's a bit cooler.
+you can bring in a second boiler on very cold days you can bring in all of the boilers to be able to meet the demands of the heat load. So these boilers, just like the chiller systems, utilize a pump to move the water around the building
+unless it's a steam system which is something we're not getting into today.
+We have chilled water, fan coils. and these come in all types of varieties where they may be ceiling mounted like these examples that we see
+they could be cabinet units that are along the perimeter walls within a facility.
+See this type a lot of times in vestibules and things like that. Sometimes they're just heal ceiling hung. or they stand in the corner of a space. So all of these all do pretty much the same thing in the chilled water
+is connected to these pipe headers, and the water is circulated through the coils. The fans blow the warm air across the coil.
+You'll see on the bottom. Here there's drain pans.
+and that's where that condensate collects and goes down this drain
+and over to an appropriate drain within the building.
+So there's 2 pipe fan coils in these in a lot of situations will utilize both the boiler in hot water.
+To go through. The same piping is the chilled or the chilled chiller water. Sorry. So if you have that scenario.
+it cut down on costs while they were building the facility, because they didn't have to have 3 or 4 pipes.
+but you have to be very aware, when you have a two-pipe system with both heating and cooling for the purpose. that if you switch from the boiler system to the chilled water system that you have to dissipate all of that heat energy
+before you open up the valves and push hot water through that chiller. because the chiller is designed to run with cold temps, not the
+180 degree water that a boiler may have in it.
+So there may be those challenges in some of the systems that you have in buildings around the country and world. For that matter.
+fan coil Ventilation options
+have to be tackled in a couple of different ways.
+We have to bring fresh air into the building. Right
+so especially we learned that with all of this stuff regarding Covid
+and bringing people back to work, became very, very important.
+that we were ventilating things correctly in the process.
+
+
+00:19:57
+So
+
+
+00:19:58
+in some of the fan coil applications. We have an outdoor air intake
+through the back wall of this, which will in a lot of cases, you'll see these applied in school classrooms. and the fan coil units are against an outside wall underneath the windows. Typically.
+this connects to the outside, and there's a damper in here you can see the actuator right here that opens and closes and allows fresh air to come in and circulate through the rooms.
+So this is a pretty common scenario and a lot of buildings.
+There's also a dough as unit dedicated outdoor air system.
+and what this does is, it brings in fresh air, tempers it and filters it to get all of the pollen and all of that kind of stuff out of the air.
+and that gets distributed through duct work down into the space.
+and this is only tempering the air. Typically, it'll provide, like 65 degree air
+It is removing the humidity. But we're not using it to necessarily cool or heat the spaces it's just tempering that outside air.
+Then we have our fan coil units in this format.
+utilizing our chilled water and our hot water to actually do the temperature control within your building. So this is a very common scenario of what you can end up, having in place
+another type of system
+that is very, very popular in becoming more popular as time goes on
+
+
+00:21:47
+our water source heat pumps.
+
+
+00:21:51
+So with this type of application. You can have heat pumps of various shapes and sizes, as we show here
+that are in control of specific spaces, meaning. We can have one heat pump in this office and a separate heat pump in this office
+we are creating heat with a person being in there a computer working.
+and this person has their own thermostat, and may still want it warmer. So this heat pump can be in heating mode.
+and it ends up pushing heat out of the duct
+to warm this space according to the thermostat.
+The next office over
+has one person in the computer, but this office is calling for cooling.
+So this heat pump is able to operate
+in due the inverse
+of what this office is doing. So we're able to do cooling in this office and heating in this office.
+The way this works is. Each of these heat pumps
+has a refrigeration system in it, just like a typical air conditioner, with one added device called a reversing valve, which makes it
+reverse the flow of the refrigerant.
+So the hot water or the hot air comes out, or the cold air comes out
+of the interior ductor. So in this scenario it makes it very easy to control the load.
+Next, this
+is cooled by a water loop that runs around the building similar to our condenser water that we saw on the water cooled chiller.
+So this water loop
+runs to each of the heat pumps. It has a supply line in a return line.
+
+
+00:23:49
+and
+
+
+00:23:50
+it brings this water out to possibly a cooling tower to reject the heat out of the building, if needed.
+but any heat that's created. Sorry the heat created over in this room, because, remember, we're doing heat transfer.
+So we're absorbing the heat into the heat pump from the return air.
+blowing cool air back into the space that heat that the heat pump absorbed is injected into the water. Piping
+or transferred is a better term.
+so this heat can make it to this piece of equipment that's calling for heat. It again is running the refrigeration circuit in this case backwards.
+So this one is pushing the warm air out and used the heat that this one created.
+So the system can kind of balance itself. If you have some areas of the building that are warm, some areas that are called.
+If it's a warm summer day, and everything is calling for cooling, we have to dissipate that heat if nothing's using it.
+So we push it out to our cooling tower, and that does it in the same fashion that it does in a chilled water system with fans, and being able to remove that heat from the system.
+
+
+00:25:16
+Another way that this is utilized
+
+
+00:25:19
+is with ground loops. and you may have heard of these as ground source, heat, pump systems.
+And what this does is our earth
+generally below 4 feet. In most of the United States. It is a constant, about 55 degree temperature
+4 feet down from the surface. So you have this giant thermal bank
+and this loop temperature.
+We don't need it to be very warm or very cold, for the heat pumps to do their job. We just need it to be rather steady.
+so we can use this heat energy
+in the middle of winter with a ground loop. it absorbs the heat from the earth and puts it into the piping
+so it can be transferred with the heat pumps into the spaces.
+In the summer months it's still moving the water. but if the water is coming back warmer than the earth, then it gives up its heat.
+So
+these are very, very efficient systems. When you're using ground loops, because you don't have any moving parts, there's no fans there. Isn't anything but
+heat transfer
+is these things get built
+now. On occasion you will have a scenario where you must add more heat. Then either the size of the ground loop and what it can carry.
+or by virtue of. There is no ground loop, and you need to be able to add some heat to the loop for cold months, and then in that case you may have a boiler
+in conjunction with the cooling tower. to be able to put all of these things together in a complete system.
+Next, we're going to talk about air handling. So this is very common scenarios that you have in a lot of buildings refreshing where we were. So here's our boiler.
+Here is our chiller. We have our spaces.
+This end space is getting heated and cooled with a fan coil, and that is hot water pipes and chilled water pipes that run to this
+and that is how this is managed. These offices are utilizing an air handling unit. We have return air, duct work that pulls the air
+from the floor in these spaces and returns it to the air handler.
+It has dampers that open up outside to bring in outside air and do the ventilation portion of the Hvac.
+The air handler has a hot water coil in it, and a chilled water coil in it in most circumstances.
+And here is our heating loop that goes to the hot water coil. Here's our cooling
+loop, provided by the chiller for the chilled water coil and our fan
+connected to duct work that brings
+the air back to terminal units, or
+affectionately known as V AV boxes in a lot of cases.
+So we have our hot water loop, our chilled water loop. In the summer months we run the chiller, and turn off the boiler in the inverse for the winter. We turn on the boiler, shut down the chillers.
+and we have valves on the air handler that open and close to allow warm water or hot water in or chilled water
+to control the temperature of the air that comes down the duct into these spaces.
+So air handlers we typically have indoors.
+and these can be a few different styles. They can be a small package there handler, a Central Station type of air handler, or a custom built for whatever you need. This thing to do.
+Notice: the Central Station has several doors, and it's got several sections.
+These are in a lot of cases built in this format.
+so that way.
+If an air handler has to be replaced, it fits through all of the doors and elevators to be able to get it into the building, and then it gets reassembled.
+Now let's talk about air handling rooftop systems. So a large V AV the rooftop is what we show an example of here.
+and i'll explain more about what V AV is in a moment.
+Then we have single zone, constant volume, rooftops. These are the little package units that you see
+on a lot of
+strip mall stores, various small buildings, or you might have a lot of these on a very large building that they have control of individual offices, for
+then we have small V AV. Air handlers.
+Oh, sorry rooftops to be able to be on the the smaller. You know one or 2 story buildings, with
+maybe 10 to 20 zones on it.
+So these are the rooftop pieces of equipment that you'll typically find. And again, this is a very generic overview of these systems.
+The Vav air handlers get connected to V AV terminal units.
+And this is an example of lots of different varieties of these things. So Viv stands for variable air volume. and what that means is
+the air handler or rooftop, let me back it up a slide. This is creating our cold air by transferring the heat out of the building
+into these coils where the fan pulls outside er across it, and rejects that heat.
+The call there is connected to the individual zones by duct work.
+and then each of these V AV boxes has got a damper in it to throttle back how much air is coming through this thing.
+to be able to provide enough air conditioning for the zone.
+Other examples are V Avs. With electric. He reheat
+series Fan v Avs. With Electric Reheat, where there's a fan actually inserted inside of the the V AV box to be able to control the air, flow and keep it constant.
+We have parallel Fan V avs. which these
+a lot of times we'll be utilized with hot water coils in these. so the fan turns on it, pulls there from the ceiling, pushes it through the coil and into the space.
+independently of the cool air produced by the rooftop unit. And then we have dual-ducted v avs.
+which also get commonly referred to as mixing boxes where we have hot duct work that comes from what we refer to as a hot deck coming in this damper cold deck or cold air coming in this damper, and then they work in unison with our controller
+to be able to provide enough warm air or cool air to manage the space.
+so if that didn't make you dizzy enough. let's look at it a little bit different way. So each of our rooms has a sensor that we have about it on the wall
+typically referred to as our thermostat
+that is connected to a controller, and the Controller has got a damper actuator with it.
+so that this gives the temperature of the room information to the controller. It runs a control program
+and determines. Is it warm in the space or cool in the space, while warm and cool, is relative, depending on what the set point of the space is, and we'll talk more about that in a minute.
+So if it's
+warm in the space. If our set point is 72, and it gets up to 74.
+This will open the damper let me back up a slide 2 slides
+open this damper up and let more cool air from the age you were I to you to be entered into the space
+once the temperature gets down to the set point. this damper will close down partially.
+and allow just enough air in to ventilate the space. So there's always enough fresh air
+that, like I said, is connected to the damper that we have in place.
+This is all happening in the Va V boxes typically above the ceiling.
+and then that outlet is connected to the registers that we see or grills that we have in each of our office spaces.
+So let's look at this a little bit different way.
+We have our
+a small V. A rooftop.
+We have our duct work from coming from the rooftop and going to each of the V AV boxes.
+Each of these has got a controller mounted on it again. That damper actuator is connected to the shaft of this damper.
+so it can open and close these dampers and allow how much air is required through the vent into the space the thermostat reacts to it.
+sends the information of the space temp back to the controller, and the Controller again makes its their termination of opening and closing the dampers. So another piece of this that comes into play
+is, if we start to close these dampers down. What makes this a Vav rooftop is this Has the capability of slowing down its fan. Usually nowadays with what we we refer to as a Vf. D. Or variable frequency drive.
+So this air handler doesn't have to move as much air. It can slow down the fan
+as these back off their airflow. If it's slowing down the fan. using less energy, we're saving energy dollars.
+So this is what's going on inside of your small building. V. AV. Systems. The whole principle works the same way on larger V. AV. Systems.
+and you can have multi-story buildings with multiple air handlers and hundreds of V Avs
+in each of the zones throughout the building. So it's all very scalable in the way these things are built.
+So now let's talk about our set points in schedules in what all of this is referring to. So, looking at our set Point bar, and this is taken right from our owner, operator, training class. You've seen this set point bar on our graphics for our zones within our web control systems.
+and this
+is our occupied set points on the top band. and the unoccupied set points on the bottom band
+occupied conditions. Heat set point, as we see here, is 70 degrees.
+Cooling set point is 75 degrees. This representation
+of this heavy white bar
+shows what our space temperature would be.
+It's not aligned with the screenshot that I grab from the thermostat. This should be over about here for 72 degrees, but you get the point.
+So when you are occupied. that means the building or zone schedule is in occupied mode.
+It is using our occupied set points to maintain the temperature in the space.
+If the temperature falls below 70 degrees.
+The colors for the zone turn blue. dark blue, or maybe red, if it's too far away from it.
+and the mechanical equipment will do whatever they have available to them
+to provide heat for the space and bring that temperature back up.
+So if it gets cooler than 70, we refer to this as going into heat mode, and if it's a V AV like we looked at previously.
+it would at least start with closing down the damper.
+and
+allowing less cool air to come into the space. If it has reheat available.
+it will then turn on the heater to bring the temperature of the air coming into the space back up.
+If it gets above the cooling set point. the same thing occurs, but it opens the V AV damper
+to allow more cooling to come into the space. There's more pieces in play than than this oversimplified means.
+But hopefully, you're getting the point that
+this is the way the mechanical piece of equipment is interacting based upon our set points. Now, when we are unoccupied, that's triggered by our schedule.
+If we do not have a schedule in place, or we are unoccupied. We widen out the set points to be able to
+basically save energy by relaxing the temperature control within the space. When we are unoccupied. We don't need to worry about maintaining 70 degrees in the space if it's the middle of winter. On a Saturday afternoon we can allow that temperature to fall all the way down to 55 degrees in the space.
+and then warm it back up again to 70 on Monday, or the inverse for cooling.
+When we are occupied we're concerned about keeping our occupants comfortable.
+When we are unoccupied we are concerned with energy savings which equates to dollars savings.
+
+
+00:41:02
+So that is the toggle between
+
+
+00:41:06
+occupied an unoccupied set points that gets triggered by our schedules.
+Now, if you have a space
+that you want to be able to change the temperature in the space our zone sensors are set up by default to give you, plus or minus 2 degree
+change in set point. So that means.
+if I am at 70 degrees in the space, and I want to make it warmer.
+I can press the up arrow, and that will shift all of the colors over on the occupied bar
+by 2 degrees. It does this in programming inside of the controller you won't. See it react that way on most graphics. But that's what you're doing.
+You're making this change.
+and that raises the set point.
+Conversely, you can move the arrow down by 2 degrees and lower the set point and make it cooler.
+I have seen many scenarios where people say you know what this is. The boss's office.
+I don't want it to be limited. I never want to get an angry call from the boss. Let's make this plus or minus 5 degrees, or plus, or minus 10 degrees, and they can control it any way that they want to
+be careful doing that
+because a lot of times people don't understand what's happening when they just push the button, and if you give somebody range to do so, and they move that up by 5 or 10 degrees.
+they could be shifting back and forth from heating mode to cooling mode and creating a never ending cycle, especially if this is an area where there's multiple cubicles served by one thermostat, and you start the thermostat wars.
+I want it warmer. I want it cooler, and you're shifting back and forth.
+So be aware we give it plus or minus 2 degrees, for a reason that also matches the plus, or the 2 degree bandwidth that we have for each of our colors
+which make up our thermographic floor plans which i'll take you there now.
+So here's our thermographic callers represented by rooms on our floor plan.
+Here is our set point bar.
+and we can see that the zones that are in green
+means. The temperature is in the green band between our heating and cooling set points areas in yellow.
+The temperature is above our cooling set point, so web control renders that color on the graphic
+and the inverse for the blue. So we have on the bottom of our floor plan our legend. and that all ties right back to our set points.
+So you understand, all of this is working in conjunction with the mechanical systems
+to be able to raise and lower the temperature in the space depending on what the demand is.
+But what about the bottom? By and what is happening when we talk about our systems being unoccupied.
+it's the same thing. When we are unoccupied
+we revert to the lower set point buyers which are 55, and 85
+for our heating and cooling set points. the zones
+end up showing gray, because that's the gray band instead of the green that we were on previously.
+and when things are in gray or unoccupied, we don't have to worry about ventilating the space because it's unoccupied, there's nobody there in most situations to be concerned with.
+Then, when we have situations like this Idf room.
+which is communications closet sort of thing, maybe a server room.
+this
+piece of equipment that we're cooling in there never goes home.
+So we have to maintain our temperatures in this space
+to be able to make sure the equipment doesn't overheat. so that everything stays working on the network side while the rest of the building is able to react to schedules
+because the people leave.
+So now let's talk about how we get from our unoccupied conditions back to occupied
+and doing it in a controlled timely manner.
+This is a trend graph, and this is showing us an example of how
+optimized start works.
+So what we're looking at on the top graph is our legend here shows us the yellow line is our zone temperature.
+The blue line is our set point or effective cooling. Set point
+the top of the graph in the green line. The bottom of the graph is our set point for effective heating set point.
+So we go unoccupied at 6 pm.
+Which means we shift from our 70 75 set points and widen out to our
+85 cooling and 55 heating set points.
+We can see through the overnight hours. The temperatures
+gradually fall. and then the next morning we have something occur here.
+We see our set points start to change, starting at about 3 30 in the morning for the heating set point.
+and the cooling set point changes at about 4 30.
+What this is doing.
+utilizing the optimized start algorithm
+within our web control system. it changes the set points.
+and this is still during unoccupied mode. We go schedule occupied according to this, at about 6 30 am.
+So ahead of being scheduled occupied, we start to bring our unoccupied set points closer to our occupied set points.
+and when the temperature hits the set point
+on the bottom bar or bottom graph, we can see. We turn on our heating stage one.
+and it boosts the temperature back up heat stage. One shuts off the
+unoccupied heating set point continues to climb until the zone temperature hits the set point again.
+at which point heat stage one bumps on. Again we see the dis, the room temperature climb.
+and it starts to fall back, bump it on again.
+and by this point we are up to schedule occupied time.
+and we already have the space up to its proper temperature
+for being schedule occupied.
+Now, the mechanical systems all will work a little bit differently
+in this interaction, and how they work.
+The example that i'm. Showing you here
+is a single zone, constant volume unit. Think in terms of the way your house works single unit in terms on the heat or the air conditioning
+to manage the house.
+and that is what this is doing by bumping the heat on and giving just enough heat for what we need on. Still, instead of waiting until 6, 30 am.
+That the temperature shoots up. and then the temperature in the space. I'm sorry the set point shoots up in the temperature, and the space continues to fall. and then it has to get pushed way up.
+and might take another hour or 2 to be able to get it back up to temperature.
+So this is how our optimized start works with the mechanical equipment.
+Kirk. Do we have any questions at this point?
+
+Kirk Strobel
+00:50:05
+No.
+
+
+00:50:07
+the watching and things are quiet. So you're
+doing a great job, all right. Well, we're going to turn left and see how many people are like. Oh, really, you're doing this to us.
+So we're going to talk about some common acronyms for Hvac.
+Then there'll be a test on this. That is a written essay. No, no, I'm just messing with you what we're going to do wrong Application where to go.
+Pdf: that's the one I want. What i'm going to show you is basically a
+condensed list, and there's more to them
+of the stuff that you hear referred to on a regular basis when it comes to Hvac and I'm not going to read through this entire thing.
+This list will be available if you would like it in Pdf format
+you can send us a email
+to training@carrier.com.
+I've got a few different webinars that i'm doing this week. So be very clear of which, Webinar, you want this common Hvac acronyms list from.
+In fact, this doesn't fit on the screen all at once. Very well, and see if I can get it there. So if you want to grab a screenshot of it at this point, you are welcome to do so, or take a picture. I'm going to give you a few seconds before I rattle through some of these
+it gives me an opportunity to take a drink.
+
+
+00:51:55
+All right, so
+
+
+00:51:56
+air conditioning, or a/C is the most common one. A. H. U. Means air Handler unit. and
+Ashra is a big one to understand You'll see people refer to that. That is the American society of Heating, refrigeration and air Conditioning Engineers.
+Ashra is the body that researches and determines
+how thick the walls should be in a building for proper insulation, and
+how many be to use a boiler must have to be able to properly heat a building. What the tonnage of a chiller must be to be able to properly cool the building.
+So that is the society that comes up with the series of standards.
+so that every job doesn't have to start from scratch of figuring things out
+being that I see we're at 153,
+and if there aren't any questions yet, I will just bounce down this list, and perhaps it will generate a question. Next up is backnet.
+Backnet stands for building automation control network. and this is an open communication protocol adopted by ash ray
+that our building management systems use to talk to each other. Protocol means language.
+so it makes it so. Everything is speaking the same language, and we can interact with lighting systems and fire systems and generators, and so forth, because we're speaking common languages.
+Bcu is a blower coil unit. Bt You, as we mentioned British thermal unit.
+Cfm. Cubic feet per minute.
+You'll see this typically used as a measure of volume of air on Vavs.
+It's at 100 Cfm. Or it's at 1,000. Cfm. That's how many cubic feet per minute of air is passing through. This thing.
+Chilled water, supply temp and chill water return temp kind of self-explanatory crack is always one that gets a giggle to the uninitiated that simply stands for a computer room a/C unit
+
+
+00:54:24
+cabinet unit heaters.
+
+
+00:54:26
+our c. Condenser water supply and condenser water Return versus chilled water supply and return discharge. Air temperature
+is the air coming out of a piece of equipment. Typically Dhw. Is referred to as domestic hot water.
+Do as we talk touched on dedicated outdoor air system. A. D. You or Pd. You
+dehumidification unit. A pdu is a pool dehumidification unit.
+Again. i'll just bounce through a few of these down further V AV boxes. How we typically refer to these things.
+and a V AV box, a terminal unit, a fan powered box. These are all kind of the same thing, with different variations on them.
+And then
+zvt is another one that you may run across that stands for variable volume and temperature.
+and this utilizes dampers similar to V Avs.
+But we actually changed the temperature coming down the duct from the rooftop unit to send it into heating mode or cooling mode
+for these different things.
+So that said. and being that we have a little bit of time. I am going to switch back
+and bear with me. I'm going to back up a few slides to talk about something real quick
+when you were looking at a V AV system.
+a very common scenario that will occur.
+There is a misunderstanding of what's happening when we look at our V AV box. If it is warm in the space. and we are calling for cooling.
+you may see that your damper on the V. AV serving the zone only opens to about 50%.
+We're getting 55 degree air coming down the pipe out of our rooftop unit in this damper, even though it's say there's a meeting going on in this space, and it's 76 degrees in there. This damper is only open
+50% in people
+
+
+00:56:58
+a lot of times we'll think that is a problem.
+
+
+00:57:02
+Always take the time to look
+at what your set point shows on the display. Let's see if I can shift gears real quick
+to an example.
+So here I switched into one of our web control systems.
+Here is our air coming from Agu. One here is our damper, and this shows that it is fully open. It's at a 100% open. The scenario that i'm talking about is when this shows that it's only 50% open
+in our temperature is calling for cooling. And you wonder why didn't this go to 100%? We're asking for it.
+So this should be doing more.
+What you need to watch is the airflow display in the set point display.
+If the airflow is within plus or minus 10 of the set point.
+It is doing everything it is designed to do.
+If I switch back to my other
+display. We have several of these dampers that are all on one duct. If this room is running a little warm, and we allow this damper
+to go past its cooling set point to a 100% open.
+we're going to lose a lot of the air going here, and the rest of the building can end up starving.
+So keep that in mind that is displayed on your Graphic for a reason to be able to show what the actual airflow is
+and what the set point is, and then your damper position in relation to that.
+and then you can bounce to your rooftop unit or air handler
+to be able to see what is the temperature of the air that's coming down the pipe from this thing.
+and so forth.
+One last thing I want to show you, and then we will wrap it up unless there's any questions that come in is notice when you have this scenario
+and I'm working on just one of our training cases. So this is all fictitious data.
+But when we see a set point of 68 degrees in the discharge, air temperature is something that's not aligned to it, and you'll notice this just changed
+because I just changed the temperature in that space.
+This is what proves to you if your cooling systems are working correctly. If you are asking for 64 degree air to come out of this thing, and it's only giving you 75 degree air
+that might be where you end up making a phone call for mechanical service to have somebody look into this or your system, Provider. If you have support agreements with them with remote accessibility and things
+to be able to start troubleshooting. Why are we not giving it the air that we require.
+which in turn can cause our system to end up
+being overheated in spaces?
