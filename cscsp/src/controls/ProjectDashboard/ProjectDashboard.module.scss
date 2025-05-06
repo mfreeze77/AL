@@ -1,0 +1,504 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+:host {
+  display: block;
+}
+
+.projectDashboard {
+  font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+  color: $ms-color-neutralPrimary;
+}
+
+.headerContainer {
+  background: $ms-color-themePrimary;
+  color: $ms-color-white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  
+  .cscLogo {
+    height: 60px;
+    width: auto;
+  }
+  
+  .headerSubtitle {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+.mainNavigation {
+  background: $ms-color-white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid $ms-color-neutralLight;
+  overflow-x: auto;
+  
+  .navItem {
+    padding: 15px 20px;
+    color: $ms-color-neutralSecondary;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    white-space: nowrap;
+    
+    &:hover {
+      color: $ms-color-themePrimary;
+    }
+    
+    &.active {
+      color: $ms-color-themePrimary;
+      
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: $ms-color-themePrimary;
+      }
+    }
+  }
+  
+  .searchContainer {
+    margin-left: auto;
+    padding: 10px 0;
+    
+    input {
+      padding: 8px 12px;
+      border: 1px solid $ms-color-neutralLight;
+      border-radius: 4px;
+      font-size: 14px;
+      width: 200px;
+      
+      &:focus {
+        outline: none;
+        border-color: $ms-color-themePrimary;
+      }
+    }
+  }
+}
+
+.contentContainer {
+  padding: 20px;
+  background: $ms-color-neutralLighterAlt;
+  min-height: calc(100vh - 120px);
+}
+
+.section {
+  display: none;
+  
+  &.active {
+    display: block;
+  }
+}
+
+.sectionTitle {
+  font-size: 24px;
+  margin: 0 0 20px 0;
+  color: $ms-color-neutralPrimary;
+  font-weight: 600;
+}
+
+.projectOverview {
+  margin-bottom: 30px;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.infoCard {
+  background: $ms-color-white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  
+  h3 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    color: $ms-color-themePrimary;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+    
+    li {
+      margin-bottom: 8px;
+    }
+  }
+  
+  p {
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+.embeddedTimelineContainer {
+  margin: 20px 0;
+}
+
+.sharepointStatus {
+  background: $ms-color-neutralLighterAlt;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  
+  p {
+    margin: 5px 0;
+  }
+}
+
+.repoSection {
+  background: $ms-color-white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.fileOperations {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  
+  &.extensionPlaceholder {
+    opacity: 0.7;
+    
+    .fileBtnPlaceholder {
+      background: $ms-color-neutralLight;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    
+    .placeholderMessage {
+      margin-left: 20px;
+      color: $ms-color-neutralSecondary;
+      font-style: italic;
+    }
+  }
+}
+
+.folderStructure {
+  .folder {
+    margin-bottom: 10px;
+    
+    .folderHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background: $ms-color-neutralLighterAlt;
+      border-radius: 4px;
+      cursor: pointer;
+      
+      &:hover {
+        background: $ms-color-neutralLight;
+      }
+      
+      .folderIcon {
+        margin-right: 8px;
+      }
+    }
+    
+    .folderContent {
+      padding: 10px;
+      padding-left: 30px;
+      display: none;
+      
+      .loading {
+        color: $ms-color-neutralSecondary;
+        font-style: italic;
+        padding: 5px 0;
+      }
+    }
+    
+    &.open {
+      .folderContent {
+        display: block;
+      }
+      
+      .arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  
+  .file {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin: 4px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    &:hover {
+      background: $ms-color-neutralLighter;
+    }
+  }
+  
+  .fileIcon {
+    margin-right: 8px;
+    color: $ms-color-neutralSecondary;
+  }
+}
+
+.specsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.specsCard {
+  background: $ms-color-white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  
+  h3 {
+    margin: 0 0 10px 0;
+    color: $ms-color-themePrimary;
+  }
+  
+  p {
+    margin: 0 0 15px 0;
+  }
+  
+  .viewSpecsBtn {
+    background: $ms-color-themePrimary;
+    color: $ms-color-white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    
+    &:hover {
+      background: $ms-color-themeDark;
+    }
+  }
+}
+
+.progressContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.progressCard {
+  background: $ms-color-white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  
+  h3 {
+    margin: 0 0 15px 0;
+    color: $ms-color-themePrimary;
+  }
+  
+  textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 10px;
+    border: 1px solid $ms-color-neutralLight;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    
+    &:focus {
+      outline: none;
+      border-color: $ms-color-themePrimary;
+    }
+  }
+  
+  button {
+    margin-top: 10px;
+    background: $ms-color-themePrimary;
+    color: $ms-color-white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    
+    &:hover {
+      background: $ms-color-themeDark;
+    }
+  }
+}
+
+.fileViewer {
+  min-height: 200px;
+  border: 1px solid $ms-color-neutralLight;
+  border-radius: 4px;
+  padding: 10px;
+  
+  p {
+    color: $ms-color-neutralSecondary;
+    font-style: italic;
+  }
+}
+
+.sectionHeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.aiContainer {
+  margin-bottom: 30px;
+}
+
+.aiGridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  
+  .aiGridFull {
+    grid-column: 1 / -1;
+  }
+  
+  .aiGridItem {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.aiCard {
+  background: $ms-color-white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  
+  h3 {
+    margin: 0 0 15px 0;
+    color: $ms-color-themePrimary;
+  }
+  
+  p {
+    margin: 0 0 10px 0;
+  }
+  
+  select, input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid $ms-color-neutralLight;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    
+    &:focus {
+      outline: none;
+      border-color: $ms-color-themePrimary;
+    }
+    
+    &:disabled {
+      background: $ms-color-neutralLighter;
+      cursor: not-allowed;
+    }
+  }
+  
+  button {
+    background: $ms-color-themePrimary;
+    color: $ms-color-white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 10px;
+    
+    &:hover {
+      background: $ms-color-themeDark;
+    }
+    
+    &:disabled {
+      background: $ms-color-neutralLight;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.aiActions {
+  display: flex;
+  gap: 10px;
+}
+
+.aiResultCard {
+  min-height: 200px;
+}
+
+.aiLoading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  
+  .spinner {
+    border: 4px solid $ms-color-neutralLighter;
+    border-top: 4px solid $ms-color-themePrimary;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  
+  .modalContent {
+    position: relative;
+    background: $ms-color-white;
+    margin: 50px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 1000px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    
+    .closeModal {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      cursor: pointer;
+      color: $ms-color-neutralSecondary;
+      
+      &:hover {
+        color: $ms-color-neutralPrimary;
+      }
+    }
+    
+    h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $ms-color-neutralLight;
+    }
+  }
+}

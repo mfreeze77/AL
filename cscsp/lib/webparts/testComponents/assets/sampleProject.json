@@ -1,0 +1,160 @@
+{
+  "projectNumber": "8603",
+  "projectName": "Willard Hall Chem-Bio Reno",
+  "clientName": "University of Delaware",
+  "projectLocation": "Newark, DE",
+  "projectDescription": "Complete building automation system renovation for the Willard Hall Chemistry and Biology laboratories, including new controllers, sensors, and integration with the campus-wide BAS.",
+  "projectType": "Building Automation",
+  "serviceType": "Installation",
+  "estimatedRevenue": "$1,250,000",
+  "startDate": "2023-01-15",
+  "endDate": "2023-12-31",
+  "progress": 65,
+  "sharepointLibraryUrl": "https://contoso.sharepoint.com/sites/projects/8603",
+  
+  "laborHours": {
+    "Project Engineering": 450,
+    "Design Engineering": 320,
+    "Software Engineering": 680,
+    "Startup & Checkout": 240,
+    "Electrical Install": 520,
+    "Pneumatic Install": 180
+  },
+  
+  "laborTimeline": [
+    {
+      "quarter": "Q1 2023",
+      "Project Engineering": 120,
+      "Design Engineering": 200,
+      "Software Engineering": 80,
+      "Startup & Checkout": 0,
+      "Electrical Install": 40,
+      "Pneumatic Install": 0,
+      "key_activities": [
+        "Initial project planning",
+        "Design specifications",
+        "Preliminary software architecture"
+      ]
+    },
+    {
+      "quarter": "Q2 2023",
+      "Project Engineering": 150,
+      "Design Engineering": 120,
+      "Software Engineering": 250,
+      "Startup & Checkout": 0,
+      "Electrical Install": 180,
+      "Pneumatic Install": 60,
+      "key_activities": [
+        "Software development",
+        "Electrical installation begins",
+        "Pneumatic system installation"
+      ]
+    },
+    {
+      "quarter": "Q3 2023",
+      "Project Engineering": 100,
+      "Design Engineering": 0,
+      "Software Engineering": 250,
+      "Startup & Checkout": 80,
+      "Electrical Install": 300,
+      "Pneumatic Install": 120,
+      "key_activities": [
+        "Software implementation",
+        "Complete electrical installation",
+        "Begin system testing"
+      ]
+    },
+    {
+      "quarter": "Q4 2023",
+      "Project Engineering": 80,
+      "Design Engineering": 0,
+      "Software Engineering": 100,
+      "Startup & Checkout": 160,
+      "Electrical Install": 0,
+      "Pneumatic Install": 0,
+      "key_activities": [
+        "System integration",
+        "Final testing",
+        "Project handover"
+      ]
+    }
+  ],
+  
+  "milestones": [
+    {
+      "id": "ms1",
+      "name": "Project Kickoff",
+      "date": "2023-01-15",
+      "type": "start"
+    },
+    {
+      "id": "ms2",
+      "name": "Design Approval",
+      "date": "2023-03-10",
+      "type": "completion"
+    },
+    {
+      "id": "ms3",
+      "name": "Installation Complete",
+      "date": "2023-09-15",
+      "type": "completion"
+    },
+    {
+      "id": "ms4",
+      "name": "System Testing",
+      "date": "2023-10-20",
+      "type": "testing"
+    },
+    {
+      "id": "ms5",
+      "name": "Project Handover",
+      "date": "2023-12-15",
+      "type": "completion"
+    }
+  ],
+  
+  "documents": [
+    {
+      "id": "master",
+      "name": "Master",
+      "files": [
+        {
+          "id": "doc1",
+          "name": "Project Charter.docx",
+          "path": "/master/Project Charter.docx",
+          "type": "docx",
+          "content": "This is a sample project charter document content."
+        },
+        {
+          "id": "doc2",
+          "name": "Requirements.xlsx",
+          "path": "/master/Requirements.xlsx",
+          "type": "xlsx"
+        }
+      ]
+    },
+    {
+      "id": "drawings",
+      "name": "Drawings",
+      "files": [
+        {
+          "id": "drw1",
+          "name": "Floor Plans.pdf",
+          "path": "/drawings/Floor Plans.pdf",
+          "type": "pdf"
+        },
+        {
+          "id": "drw2",
+          "name": "Schematics.pdf",
+          "path": "/drawings/Schematics.pdf",
+          "type": "pdf"
+        }
+      ]
+    }
+  ],
+  
+  "specifications": {
+    "specificationFile": "/specifications/BAS Specifications.pdf",
+    "drawingsFile": "/drawings/BAS Drawings.pdf"
+  }
+}

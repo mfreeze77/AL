@@ -1,0 +1,102 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.testComponents {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+  }
+}
+
+.welcome {
+  text-align: center;
+  margin-bottom: 20px;
+  
+  h2 {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+}
+
+.controlsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.componentSection {
+  background: $ms-color-white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+  h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: $ms-color-themePrimary;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $ms-color-neutralLight;
+  }
+}
+
+.componentContainer {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid $ms-color-neutralLight;
+  border-radius: 4px;
+  background-color: $ms-color-neutralLighterAlt;
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); // note: CSS Custom Properties support is limited so we need to add a fallback value
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); // note: CSS Custom Properties support is limited so we need to add a fallback value
+    }
+  }
+}
+
+.loading {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: $ms-color-neutralLighter;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+  h2 {
+    color: $ms-color-themePrimary;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: $ms-color-neutralPrimary;
+  }
+}
+
+.error {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #FDE7E9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+  h2 {
+    color: $ms-color-redDark;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: $ms-color-neutralPrimary;
+    margin-bottom: 8px;
+  }
+}

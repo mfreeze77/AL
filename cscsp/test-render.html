@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSC Project Controls Test</title>
+    <!-- React and ReactDOM -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Recharts and dependencies -->
+    <script src="https://unpkg.com/d3-scale@4.0.2/dist/d3-scale.min.js"></script>
+    <script src="https://unpkg.com/d3-shape@3.1.0/dist/d3-shape.min.js"></script>
+    <script src="https://unpkg.com/d3-array@3.2.0/dist/d3-array.min.js"></script>
+    <script src="https://unpkg.com/recharts@2.1.12/umd/Recharts.js"></script>
+    <!-- Babel for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f3f2f1;
+            margin: 0;
+            padding: 20px;
+            color: #323130;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .test-section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #0078d4;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="test-section">
+            <h1>CSC Project Controls Test</h1>
+            <p>This is a simple test page to verify our components are working correctly.</p>
+            <div id="root"></div>
+        </div>
+    </div>
+
+    <script type="text/babel">
+            laborHours: {
+                "Project Engineering": 450,
+                "Design Engineering": 320,
+                "Software Engineering": 680,
+                "Startup & Checkout": 240,
+                "Electrical Install": 520,
+                "Pneumatic Install": 180
+            },
+            laborTimeline: [
+                {
+                    quarter: "Q1 2023",
+                    "Project Engineering": 120,
+                    "Design Engineering": 200,
+                    "Software Engineering": 80,
+                    "Startup & Checkout": 0,
+                    "Electrical Install": 40,
+                    "Pneumatic Install": 0,
+                    key_activities: [
+                        "Initial project planning",
+                        "Design specifications",
+                        "Preliminary software architecture"
+                    ]
+                },
+                {
+                    quarter: "Q2 2023",
+                    "Project Engineering": 150,
+                    "Design Engineering": 120,
+                    "Software Engineering": 250,
+                    "Startup & Checkout": 0,
+                    "Electrical Install": 180,
+                    "Pneumatic Install": 60,
+                    key_activities: [
+                        "Software development",
+                        "Electrical installation begins",
+                        "Pneumatic system installation"
+                    ]
+                },
+                {
+                    quarter: "Q3 2023",
+                    "Project Engineering": 100,
+                    "Design Engineering": 0,
+                    "Software Engineering": 250,
+                    "Startup & Checkout": 80,
+                    "Electrical Install": 300,
+                    "Pneumatic Install": 120,
+                    key_activities: [
+                        "Software implementation",
+                        "Complete electrical installation",
+                        "Begin system testing"
+                    ]
+                },
+                {
+                    quarter: "Q4 2023",
+                    "Project Engineering": 80,
+                    "Design Engineering": 0,
+                    "Software Engineering": 100,
+                    "Startup & Checkout": 160,
+                    "Electrical Install": 0,
+                    "Pneumatic Install": 0,
+                    key_activities: [
+                        "System integration",
+                        "Final testing",
+                        "Project handover"
+                    ]
+                }
+            ],
+            milestones: [
+                {
+                    id: "ms1",
+                    name: "Project Kickoff",
+                    date: new Date("2023-01-15"),
+                    type: "start"
+                },
+                {
+                    id: "ms2",
+                    name: "Design Approval",
+                    date: new Date("2023-03-10"),
+                    type: "completion"
+                },
+                {
+                    id: "ms3",
+                    name: "Installation Complete",
+                    date: new Date("2023-09-15"),
+                    type: "completion"
+                },
+                {
+                    id: "ms4",
+                    name: "System Testing",
+                    date: new Date("2023-10-20"),
+                    type: "testing"
+                },
+                {
+                    id: "ms5",
+                    name: "Project Handover",
+                    date: new Date("2023-12-15"),
+                    type: "completion"
+                }
+            ]
+        };
+
+        // Mock data for ProjectDashboard
+        const projectDashboardProps = {
+            projectNumber: "8603",
+            projectName: "Willard Hall Chem-Bio Reno BAS",
+            clientName: "University of Delaware",
+            projectLocation: "Newark, DE",
+            projectDescription: "Complete building automation system renovation for the Willard Hall Chemistry and Biology laboratories, including new controllers, sensors, and integration with the campus-wide BAS.",
+            projectType: "Building Automation",
+            sharepointLibraryUrl: "https://contoso.sharepoint.com/sites/projects/8603",
+            projectCardProps: projectCardProps,
+            documents: [
+                {
+                    id: "master",
+                    name: "Master",
+                    files: [
+                        {
+                            id: "doc1",
+                            name: "Project Charter.docx",
+                            path: "/master/Project Charter.docx",
+                            type: "docx",
+                            content: "This is a sample project charter document content."
+                        },
+                        {
+                            id: "doc2",
+                            name: "Requirements.xlsx",
+                            path: "/master/Requirements.xlsx",
+                            type: "xlsx"
+                        }
+                    ]
+                },
+                {
+                    id: "drawings",
+                    name: "Drawings",
+                    files: [
+                        {
+                            id: "drw1",
+                            name: "Floor Plans.pdf",
+                            path: "/drawings/Floor Plans.pdf",
+                            type: "pdf"
+                        },
+                        {
+                            id: "drw2",
+                            name: "Schematics.pdf",
+                            path: "/drawings/Schematics.pdf",
+                            type: "pdf"
+                        }
+                    ]
+                }
+            ],
+            specifications: {
+                specificationFile: "/specifications/BAS Specifications.pdf",
+                drawingsFile: "/drawings/BAS Drawings.pdf"
+            }
+        };
+
+        // Simple ProjectCard component for testing
+        const ProjectCard = (props) => {
+            const {
+                projectNumber,
+                title,
+                businessName,
+                estimatedRevenue,
+                projectType,
+                serviceType,
+                startDate,
+                endDate,
+                laborHours,
+                laborTimeline,
+                milestones
+            } = props;
+
+            // Calculate progress
+            const now = new Date();
+            const totalTime = endDate - startDate;
+            const elapsed = now - startDate;
+            const progress = Math.max(0, Math.min(100, (elapsed / totalTime) * 100));
+
+            return (
+                <div style={{ background: 'white', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', padding: '24px', maxWidth: '800px', margin: '0 auto' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '24px', marginBottom: '24px', paddingBottom: '16px', borderBottom: '1px solid #edebe9' }}>
+                        <div>
+                            <h1 style={{ margin: '0 0 8px 0', fontSize: '24px' }}>{title}</h1>
+                            <h2 style={{ margin: '0', fontSize: '18px', color: '#0078d4' }}>{projectNumber}</h2>
+                        </div>
+                        <div style={{ textAlign: 'right' }}>
+                            <div style={{ marginBottom: '8px', color: '#605e5c', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '8px' }}>
+                                <i className="fas fa-calendar"></i>
+                                {startDate.toLocaleDateString()} - {endDate.toLocaleDateString()}
+                            </div>
+                            <div style={{ width: '200px', marginLeft: 'auto' }}>
+                                <div style={{ height: '4px', background: '#edebe9', borderRadius: '2px', overflow: 'hidden' }}>
+                                    <div style={{ height: '100%', background: '#0078d4', width: `${progress.toFixed(1)}%`, transition: 'width 0.3s ease' }}></div>
+                                </div>
+                                <div style={{ marginTop: '4px', fontSize: '12px', color: '#605e5c', textAlign: 'right' }}>
+                                    Project Progress: {progress.toFixed(1)}%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginBottom: '32px' }}>
+                        <div style={{ background: '#f8f8f8', padding: '16px', borderRadius: '6px', borderLeft: '4px solid #0078d4', display: 'flex', flexDirection: 'column' }}>
+                            <h3 style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#605e5c', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                <i className="fas fa-building" style={{ color: '#0078d4' }}></i>
+                                Business Name
+                            </h3>
+                            <p style={{ margin: '0', fontSize: '18px', fontWeight: '600' }}>{businessName}</p>
+                        </div>
+                        <div style={{ background: '#f8f8f8', padding: '16px', borderRadius: '6px', borderLeft: '4px solid #0078d4', display: 'flex', flexDirection: 'column' }}>
+                            <h3 style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#605e5c', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                <i className="fas fa-dollar-sign" style={{ color: '#0078d4' }}></i>
+                                Estimated Revenue
+                            </h3>
+                            <p style={{ margin: '0', fontSize: '18px', fontWeight: '600' }}>{estimatedRevenue}</p>
+                        </div>
+                        <div style={{ background: '#f8f8f8', padding: '16px', borderRadius: '6px', borderLeft: '4px solid #0078d4', display: 'flex', flexDirection: 'column' }}>
+                            <h3 style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#605e5c', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                <i className="fas fa-tasks" style={{ color: '#0078d4' }}></i>
+                                Project Type
+                            </h3>
+                            <p style={{ margin: '0', fontSize: '18px', fontWeight: '600' }}>
+                                {projectType && serviceType 
+                                    ? `${projectType} | ${serviceType}`
+                                    : projectType || serviceType || 'N/A'}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div style={{ background: '#f8f8f8', borderRadius: '8px', padding: '24px', marginBottom: '32px' }}>
+                        <h2 style={{ fontSize: '20px', margin: '0 0 16px 0', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <i className="fas fa-chart-line"></i>
+                            Labor Analysis
+                        </h2>
+                        <div style={{ height: '300px', background: 'white', padding: '20px', borderRadius: '6px', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+                            <div style={{ textAlign: 'center', padding: '100px 0' }}>
+                                [Chart visualization would appear here]
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style={{ marginTop: '32px' }}>
+                        <h2 style={{ fontSize: '20px', margin: '0 0 16px 0', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <i className="fas fa-flag"></i>
+                            Key Milestones
+                        </h2>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
+                            {milestones.map((milestone) => (
+                                <div 
+                                    key={milestone.id} 
+                                    style={{ 
+                                        background: '#f8f8f8', 
+                                        padding: '16px', 
+                                        borderRadius: '6px', 
+                                        borderLeft: '4px solid', 
+                                        borderColor: milestone.type === 'start' ? '#0078d4' : 
+                                                    milestone.type === 'completion' ? '#107c10' : '#d83b01',
+                                        display: 'flex', 
+                                        flexDirection: 'column' 
+                                    }}
+                                >
+                                    <div style={{ fontSize: '12px', color: '#605e5c', margin: '0 0 4px 0', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                        <i className="fas fa-calendar"></i>
+                                        {milestone.date.toLocaleDateString()}
+                                    </div>
+                                    <div style={{ fontSize: '14px', margin: '0', fontWeight: '600' }}>{milestone.name}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        // Simple ProjectDashboard component for testing
+        const ProjectDashboard = (props) => {
+            const {
+                projectNumber,
+                projectName,
+                clientName,
+                projectLocation,
+                projectDescription,
+                projectType,
+                sharepointLibraryUrl,
+                projectCardProps,
+                documents,
+                specifications
+            } = props;
+
+            const [activeSection, setActiveSection] = React.useState('introduction');
+
+            return (
+                <div style={{ fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif", color: '#323130' }}>
+                    <div style={{ background: '#0078d4', color: 'white', padding: '20px', display: 'flex', alignItems: 'center', gap: '20px' }}>
+                        <div style={{ width: '60px', height: '60px', background: '#f3f2f1', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <span style={{ fontSize: '24px', fontWeight: 'bold' }}>CSC</span>
+                        </div>
+                        <h1 style={{ margin: '0', fontSize: '20px', fontWeight: '400' }}>
+                            A comprehensive guide for {projectNumber} {projectName}
+                        </h1>
+                    </div>
+
+                    <div style={{ background: 'white', display: 'flex', alignItems: 'center', padding: '0 20px', borderBottom: '1px solid #edebe9', overflowX: 'auto' }}>
+                        {['introduction', 'timeline', 'documents', 'specifications', 'progress', 'ai-assistant'].map((section) => (
+                            <a 
+                                key={section}
+                                href={`#${section}`}
+                                onClick={(e) => { e.preventDefault(); setActiveSection(section); }}
+                                style={{ 
+                                    padding: '15px 20px', 
+                                    color: activeSection === section ? '#0078d4' : '#605e5c', 
+                                    textDecoration: 'none', 
+                                    fontWeight: '600',
+                                    position: 'relative',
+                                    whiteSpace: 'nowrap',
+                                    borderBottom: activeSection === section ? '3px solid #0078d4' : 'none'
+                                }}
+                            >
+                                {section.charAt(0).toUpperCase() + section.slice(1).replace('-', ' ')}
+                            </a>
+                        ))}
+                        <div style={{ marginLeft: 'auto', padding: '10px 0' }}>
+                            <input 
+                                type="text" 
+                                placeholder="🔍 Search files..." 
+                                style={{ 
+                                    padding: '8px 12px', 
+                                    border: '1px solid #edebe9', 
+                                    borderRadius: '4px', 
+                                    fontSize: '14px', 
+                                    width: '200px' 
+                                }} 
+                            />
+                        </div>
+                    </div>
+
+                    <div style={{ padding: '20px', background: '#f3f2f1', minHeight: '500px' }}>
+                        {activeSection === 'introduction' && (
+                            <div>
+                                <h2 style={{ fontSize: '24px', margin: '0 0 20px 0', fontWeight: '600' }}>Introduction</h2>
+                                <div style={{ marginBottom: '30px' }}>
+                                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+                                        <div style={{ background: 'white', padding: '20px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
+                                            <h3 style={{ margin: '0 0 15px 0', fontSize: '18px', color: '#0078d4' }}>Project Details</h3>
+                                            <ul style={{ margin: '0', paddingLeft: '20px' }}>
+                                                <li style={{ marginBottom: '8px' }}><strong>Project Name:</strong> {projectNumber} {projectName}</li>
+                                                <li style={{ marginBottom: '8px' }}><strong>Client:</strong> {clientName}</li>
+                                                <li style={{ marginBottom: '8px' }}><strong>Location:</strong> {projectLocation}</li>
+                                            </ul>
+                                        </div>
+                                        <div style={{ background: 'white', padding: '20px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
+                                            <h3 style={{ margin: '0 0 15px 0', fontSize: '18px', color: '#0078d4' }}>Project Overview</h3>
+                                            <p style={{ margin: '0', lineHeight: '1.5' }}>{projectDescription}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        {activeSection === 'timeline' && (
+                            <div>
+                                <h2 style={{ fontSize: '24px', margin: '0 0 20px 0', fontWeight: '600' }}>Project Timeline & Labor Analysis</h2>
+                                <div style={{ margin: '20px 0' }}>
+                                    <ProjectCard {...projectCardProps} />
+                                </div>
+                            </div>
+                        )}
+
+                        {activeSection === 'documents' && (
+                            <div>
+                                <h2 style={{ fontSize: '24px', margin: '0 0 20px 0', fontWeight: '600' }}>Project Documentation</h2>
+                                <div style={{ background: '#f8f8f8', padding: '15px', borderRadius: '8px', marginBottom: '20px' }}>
+                                    <p style={{ margin: '5px 0' }}>SharePoint Document Library: <span>{sharepointLibraryUrl || 'Not configured'}</span></p>
+                                    <p style={{ margin: '5px 0' }}>
+                                        {sharepointLibraryUrl 
+                                            ? 'SharePoint integration is available.' 
+                                            : 'SharePoint integration is not configured.'}
+                                    </p>
+                                </div>
+                                <div style={{ background: 'white', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)', padding: '20px', marginBottom: '30px' }}>
+                                    <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
+                                        <button style={{ background: '#0078d4', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '4px', fontWeight: '600' }}>View Files</button>
+                                        <button style={{ background: '#f3f2f1', color: '#323130', border: 'none', padding: '8px 16px', borderRadius: '4px', fontWeight: '600' }}>Submit Changes</button>
+                                        <button style={{ background: '#f3f2f1', color: '#323130', border: 'none', padding: '8px 16px', borderRadius: '4px', fontWeight: '600' }}>Approve Changes</button>
+                                    </div>
+                                    <div>
+                                        {documents && documents.map((folder) => (
+                                            <div key={folder.id} style={{ marginBottom: '10px' }}>
+                                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px', background: '#f3f2f1', borderRadius: '4px', cursor: 'pointer' }}>
+                                                    <div>
+                                                        <span style={{ marginRight: '8px' }}>📁</span>
+                                                        <span>{folder.name}</span>
+                                                    </div>
+                                                    <span>▼</span>
+                                                </div>
+                                                <div style={{ padding: '10px', paddingLeft: '30px' }}>
+                                                    {folder.files && folder.files.map((file) => (
+                                                        <div key={file.id} style={{ padding: '5px 0', cursor: 'pointer' }}>
+                                                            <span style={{ marginRight: '8px' }}>📄</span>
+                                                            <span>{file.name}</span>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        {activeSection === 'specifications' && (
+                            <div>
+                                <h2 style={{ fontSize: '24px', margin: '0 0 20px 0', fontWeight: '600' }}>Project Specifications</h2>
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+                                    <div style={{ background: 'white', padding: '20px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
+                                        <h3 style={{ margin: '0 0 10px 0', color: '#0078d4' }}>{projectType} Specifications</h3>
+                                        <p style={{ margin: '0 0 15px 0' }}>View the project specifications and requirements.</p>
+                                        <button style={{ background: '#0078d4', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '4px', cursor: 'pointer', fontWeight: '600' }}>
+                                            View Specifications
+                                        </button>
+                                    </div>
+                                    <div style={{ background: 'white', padding: '20px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
+                                        <h3 style={{ margin: '0 0 10px 0', color: '#0078d4' }}>Drawings</h3>
+                                        <p style={{ margin: '0 0 15px 0' }}>View the project drawings and plans.</p>
+                                        <button style={{ background: '#0078d4', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '4px', cursor: 'pointer', fontWeight: '600' }}>
+                                            View Drawings
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        {activeSection === 'progress' && (
+                            <div>
+                                <h2 style={{ fontSize: '24px', margin: '0 0 20px 0', fontWeight: '600' }}>Project Progress</h2>
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+                                    <div style={{ background: 'white', padding: '20px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
+                                        <h3 style={{ margin: '0 0 15px 0', color: '#0078d4' }}>Project Notes</h3>
+                                        <textarea 
+                                            placeholder="Add your project notes here..." 
+                                            style={{ 
+                                                width: '100%', 
+                                                minHeight: '200px', 
+                                                padding: '10px', 
+                                                border: '1px solid #edebe9', 
+                                                borderRadius: '4px', 
+                                                resize: 'vertical', 
+                                                fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" 
+                                            }}
+                                        ></textarea>
+                                        <button 
+                                            style={{ 
+                                                marginTop: '10px', 
+                                                background: '#0078d4', 
+                                                color: 'white', 
+                                                border: 'none', 
+                                                padding: '8px 16px', 
+                                                borderRadius: '4px', 
+                                                cursor: 'pointer', 
+                                                fontWeight: '600' 
+                                            }}
+                                        >
+                                            Save Notes
+                                        </button>
+                                    </div>
+                                    <div style={{ background: 'white', padding: '20px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
+                                        <h3 style={{ margin: '0 0 15px 0', color: '#0078d4' }}>File Viewer</h3>
+                                        <div style={{ minHeight: '200px', border: '1px solid #edebe9', borderRadius: '4px', padding: '10px' }}>
+                                            <p style={{ color: '#605e5c', fontStyle: 'italic' }}>Select a file from the Documents section to view it here.</p>
+                                        </div>
+                                    </div>
